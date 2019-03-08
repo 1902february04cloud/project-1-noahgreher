@@ -1,0 +1,17 @@
+[
+  {
+    "DESCRIPTION": "LEGENDARY FIRE BIRD",
+    "TYPE": "FIRE",
+    "NAME": "MOLTRES"
+  },
+  {
+    "DESCRIPTION": "A FORGETTABLE ICE SEAL",
+    "TYPE": "ICE",
+    "NAME": "DEWGONG"
+  },
+  {
+    "DESCRIPTION": "SCARY GHOST POKEMON",
+    "TYPE": "GHOST",
+    "NAME": "HAUNTER"
+  }
+]

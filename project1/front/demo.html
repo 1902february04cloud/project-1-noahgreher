@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon!</title>
+
+    <!-- ICON -->
+    <link rel="icon" href="https://s3.amazonaws.com/pokemonweb/project1/front/images/pokeball.png" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+    <!-- Boostrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="https://s3.amazonaws.com/pokemonweb/project1/front/css/demo.css" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <strong class="navbar-brand">Pokemon!</strong>
+            </div>
+        </div>
+    </nav>
+
+    <!--HALFER Panel -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>HALFER</h3>
+            </div>
+            <div class="form-group">
+                <input id="number" placeholder="Number" class="form-control" />
+            </div>
+            <div id="primeMessage" class="response-center"></div>
+            <button id="calculate" class="btn btn-md btn-success btn-block">Calculate</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!--ADD A POKEMON-->
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Add a Pokemon!</h3>
+                </div>
+                <div class="form-group">
+                    <input id="name" placeholder="Pokemon Name" class="form-control" />
+                    <input id="description" placeholder="Description" class="form-control" />
+                    
+                    <select class="form-control" id="type">
+                            <option selected>Pokemon Types!</option>
+                            <option value="FIRE">FIRE</option>
+                            <option value="GRASS">GRASS</option>
+                            <option value="WATER">ELECTRIC</option>
+                            <option value="PSYCHIC">PSYCHIC</option>
+                            <option value="ICE">ICE</option>
+                            <option value="DRAGON">DRAGON</option>
+                            <option value="DARK">DARK</option>
+                            <option value="FAIRY">FAIRY</option>
+                            <option value="NORMAL">NORMAL</option>
+                            <option value="FIGHTING">FIGHTING</option>
+                            <option value="FLYING">FLYING</option>
+                            <option value="POSION">POISON</option>
+                            <option value="GROUND">GROUND</option>
+                            <option value="ROCK">ROCK</option>
+                            <option value="BUG">BUG</option>
+                            <option value="GHOST">GHOST</option>
+                            <option value="STEEL">STEEL</option>
+                          </select>
+                </div>
+                <div id="createMessage" class="response-center"></div>
+                <button id="create" class="btn btn-md btn-success btn-block">UPDATE</button>
+            </div>
+        </div>
+        <!--UPDATE A POKEMON-->
+        <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>UPDATE a Pokemon!</h3>
+                    </div>
+                    <div class="form-group">
+                        <input id="name1" placeholder="Pokemon Name" class="form-control" />
+                        <input id="description1" placeholder="Description" class="form-control" />
+                        
+                        <select class="form-control" id="type1">
+                                <option selected>Pokemon Types!</option>
+                                <option value="FIRE">FIRE</option>
+                                <option value="GRASS">GRASS</option>
+                                <option value="WATER">ELECTRIC</option>
+                                <option value="PSYCHIC">PSYCHIC</option>
+                                <option value="ICE">ICE</option>
+                                <option value="DRAGON">DRAGON</option>
+                                <option value="DARK">DARK</option>
+                                <option value="FAIRY">FAIRY</option>
+                                <option value="NORMAL">NORMAL</option>
+                                <option value="FIGHTING">FIGHTING</option>
+                                <option value="FLYING">FLYING</option>
+                                <option value="POSION">POISON</option>
+                                <option value="GROUND">GROUND</option>
+                                <option value="ROCK">ROCK</option>
+                                <option value="BUG">BUG</option>
+                                <option value="GHOST">GHOST</option>
+                                <option value="STEEL">STEEL</option>
+                              </select>
+                    </div>
+                    <div id="createMessage1" class="response-center"></div>
+                    <button id="update" class="btn btn-md btn-success btn-block">UPDATE</button>
+                </div>
+            </div>
+
+    <hr>    
+    <!--IMG SEARCH -->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>IMAGE SEARCH</h3>
+            </div>
+            <div class="form-group">
+                <input id="image" placeholder="ENTER POKEMON NAME" class="form-control" />
+            </div>
+            <div id="returnimg" class="response-center"></div>
+            <button id="images" class="btn btn-md btn-success btn-block">Search</button>
+        </div>
+    </div>    
+    <hr>
+    <!--RETURN DATABASE VALUES-->
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>Find a Pokemon!</h3>
+            </div>
+            <ul id="ec2List" class="list-group">
+            </ul>
+            <button id="list" class="btn btn-md btn-success btn-block btn-list">SEARCH</button>
+            <div class="panel-footer">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/primer.js"></script>
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/create-ec2.js"></script>
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/list-ec2.js"></script>
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/img.js"></script>
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/main.js"></script>
+    <script src="https://s3.amazonaws.com/pokemonweb/project1/front/js/update-pokemon.js"></script>
+
+
+</body>
+    </html>
